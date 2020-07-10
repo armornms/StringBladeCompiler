@@ -8,7 +8,7 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 use Wpb\String_Blade_Compiler\Engines\CompilerEngine;
 use Wpb\String_Blade_Compiler\Compilers\StringBladeCompiler;
 
-class StringBladeServiceProvider extends ViewServiceProvider implements DeferrableProvider
+class StringBladeServiceProvider extends ViewServiceProvider
 {
 
     /**
@@ -167,15 +167,5 @@ class StringBladeServiceProvider extends ViewServiceProvider implements Deferrab
                     $string_blade->directive($name, $directive);
                 });
         }
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [StringBlade::class];
     }
 }
